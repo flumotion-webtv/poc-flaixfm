@@ -9,7 +9,7 @@ angular.module('pocFlaixfmApp', [
 
     // setup fade animations
     $(window).scroll(function () {
-      return $(".animate-in").not(".hidden").each(function (i, element) {
+      return $('.animate-in').not('.hidden').each(function (i, element) {
         if ($(element).offset().top + 80 < ($(window).height() + $(window).scrollTop())) {
           return $(element).removeClass('animate-in');
         }
