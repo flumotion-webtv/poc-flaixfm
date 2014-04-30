@@ -1,0 +1,18 @@
+.list-group-item {
+    padding: 0px;
+    order-right-width: 1px;
+    border-right-color: #ddd;
+}
+
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+    background-color: #f14b4b;
+    border-color: #f14b4b;
+}
+
+.list-group-item .thumb-wrap, .list-group-item .thumb-wrap img {
+    width: 100% !important;
+}
+
+.list-group-item .media-body {
+    float: left;
+}

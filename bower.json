@@ -1,0 +1,17 @@
+{
+  "name": "poc-flaixfm",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.2.15",
+    "json3": "~3.2.6",
+    "es5-shim": "~2.1.0",
+    "jquery": "~1.11.0",
+    "bootstrap": "~3.0.3",
+    "underscore": "~1.6.0",
+    "angular-fmt": "ssh://git@thinkmux.bt.bcn.flumotion.net/srv/git/angular-fmt.git#9e1415b7bae066bb145177a8f64779f9983632a8"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.15",
+    "angular-scenario": "1.2.15"
+  }
+}
