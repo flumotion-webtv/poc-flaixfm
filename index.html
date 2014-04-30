@@ -1,0 +1,115 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/d356a0f5.main.css"/>
+  </head>
+  <body ng-app="pocFlaixfmApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0px;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">FLAIX fm</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-left">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-signal"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-music"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-lock"></span></button>
+            </div>
+          </form>
+          <form class="navbar-form navbar-right">
+            <button type="submit" class="btn btn-link">Directe <span class="glyphicon glyphicon-play"></span></button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-envelope"></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <img class="col-md-12" src="images/8ec6ff55.banner.png">
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>NUM. 1</h3>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+          <h3>MEGACRAC</h3>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>TOP 5</h3>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/76353679.ad.png" style="width: 100%;">
+        </div>
+      </div>
+      <div class="row">
+        <img class="col-md-12" src="images/36ad7af9.ad-banner.png">
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <button class="btn btn-default btn-lg btn-block">GRAELLA</button>
+          <img src="images/99b873e1.current-song.png" style="width: 100%;">
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-default btn-lg btn-block">DJS</button>
+          <img src="images/b3f51b0a.bg-player.png" style="width: 100%;">
+          <div fmt-player
+               player-html5="browser"
+               autoplay-enabled="true"
+               style="width: 375px; height: 40px; position: absolute; bottom: 177px;"></div>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-default btn-lg btn-block">FESTES</button>
+          <img src="images/76353679.ad.png" style="width: 100%;">
+        </div>
+      </div>
+      <div fmt-playlist
+           class="row"
+           columns="3"
+           duration-visible="false"
+           likes-visible="false"
+           current-item-id="none"
+           css-url="styles/playlist.css"
+           content="http://bo.flaix.webtv.flumotion.com/api/channels/52/pods"></div>
+      <div fmt-playlist
+           class="row"
+           columns="6"
+           duration-visible="false"
+           likes-visible="false"
+           current-item-id="none"
+           css-url="styles/playlist.css"
+           content="http://bo.flaix.webtv.flumotion.com/api/channels/53/pods"></div>
+    </div>
+
+    <!--[if lt IE 9]>
+    <script src="scripts/4d08494f.shim.js"></script>
+    <![endif]-->
+
+    <script src="scripts/7cd7d3f8.vendor.js"></script>
+
+    <script src="scripts/37678f86.scripts.js"></script>
+</body>
+</html>
