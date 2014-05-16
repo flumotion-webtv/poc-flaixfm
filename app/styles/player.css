@@ -1,0 +1,93 @@
+.fmt-player {
+    width: 100%;
+    height: 30px;
+}
+
+/* hide unnecessary components */
+.fmt-player .vjs-default-skin .vjs-big-play-button,
+.fmt-player .vjs-default-skin .vjs-fullscreen-control,
+.fmt-player .vjs-default-skin .vjs-poster,
+.fmt-player .vjs-default-skin .vjs-loading-spinner:before,
+.fmt-player .vjs-default-skin .vjs-time-controls,
+.fmt-player .vjs-default-skin .vjs-time-divider,
+.fmt-player .vjs-default-skin .vjs-mute-control,
+.fmt-player .vjs-default-skin .vjs-volume-menu-button {
+    display: none;
+}
+
+/* icons color and border */
+.fmt-player .vjs-default-skin {
+    color: #f14b4b;
+    border-radius: 5px;
+}
+
+.fmt-player .vjs-default-skin .vjs-control-bar {
+    display: block;
+    background-color: #f8d0d0;
+    border-radius: 5px;
+}
+
+/* bars color */
+.fmt-player .vjs-default-skin .vjs-play-progress,
+.fmt-player .vjs-default-skin .vjs-volume-level,
+.fmt-player .vjs-default-skin .vjs-volume-bar {
+    background-color: #f14b4b;
+    height: .7em;
+}
+
+/* progress */
+.fmt-player .vjs-default-skin .vjs-slider,
+.fmt-player .vjs-default-skin .vjs-load-progress {
+    background-color: #f6c0c0;
+}
+
+.fmt-player .vjs-default-skin .vjs-seek-handle:before {
+    padding-top: 0;
+    font-size: 1.1em;
+}
+
+.fmt-player .vjs-default-skin .vjs-slider-handle:before {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+/* volume */
+.fmt-player .vjs-default-skin .vjs-volume-handle:before {
+    top: -.1em;
+}
+
+.fmt-player .vjs-default-skin .vjs-volume-control {
+    float: left;
+}
+
+.fmt-player .vjs-default-skin .vjs-volume-bar {
+    background-color: #f6c0c0;
+    height: .7em;
+}
+
+.fmt-player .vjs-default-skin .vjs-volume-handle:before {
+    font-size: 1em;
+}
+
+/* hide shadows */
+.fmt-player .vjs-default-skin .vjs-control:before {
+    text-shadow: none;
+}
+
+/* don't hide the control bar */
+.fmt-player .vjs-default-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+    visibility: inherit;
+    opacity: 1;
+}
+
+/* move the progress bar inside controls */
+.fmt-player .vjs-default-skin .vjs-progress-control {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    right: 30px;
+    font-size: .9em;
+}

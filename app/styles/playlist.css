@@ -1,4 +1,10 @@
-.list-group-item {
+.list-group {
+    padding: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+a.list-group-item {
     padding: 0px;
     order-right-width: 1px;
     border-right-color: #ddd;
@@ -9,10 +15,74 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
     border-color: #f14b4b;
 }
 
-.list-group-item .thumb-wrap, .list-group-item .thumb-wrap img {
-    width: 100% !important;
+a.list-group-item .thumb-wrap, a.list-group-item .thumb-wrap img {
+    width: 100%;
 }
 
-.list-group-item .media-body {
-    float: left;
+a.list-group-item .metadata {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    height: 32px;
+}
+
+a.list-group-item .metadata p {
+    margin: 0px;
+    line-height: 15px;
+}
+
+/* triangle pointing down */
+.triangle-down {
+    position: absolute;
+    width: 100%;
+}
+
+.triangle-down > div {
+    width: 0;
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 67px solid transparent;
+    border-right: 67px solid transparent;
+    border-top: 60px solid black;
+}
+
+.triangle-down > div > p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: white;
+    font-family: monospace;
+    top: -5px;
+    font-size: 40px;
+}
+
+/* triangle small */
+.triangle-down.triangle-sm > div {
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 30px solid black;
+}
+
+.triangle-down.triangle-sm > div > p {
+    top: -2px;
+    font-size: 17px;
+}
+
+/* triangle pointing up */
+.triangle-up {
+    background: no-repeat center bottom;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 36px;
+    position: absolute;
+}
+
+.triangle-up.megacrac {
+    background-image: url('megacrac.png');
+}
+
+.triangle-up.numero1 {
+    background-image: url('numero1.png');
 }

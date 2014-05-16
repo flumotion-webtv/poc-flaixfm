@@ -1,19 +1,12 @@
-<div class="media">
-  <div class="pull-left thumb-wrap" ng-if="config.thumbVisible" style="position: relative; width: 143px;">
-    <img ng-src="{{item.thumbnail_url}}" class="pull-left" style="width: 100%;">
-      <span class="label label-default label-overlay"
-            ng-if="config.durationVisible"
-            style="position: absolute; bottom: 2px; right: 2px;">
-        {{item.livestream?'live':(item.duration|duration)}}
-      </span>
+<div class="thumb-wrap">
+  <div class="triangle-down" ng-class="{'triangle-sm': $index > 2}">
+    <div><p>{{$index + 1}}</p></div>
   </div>
-  <div class="media-body">
-    <h4 class="list-group-item-heading" ng-if="config.nameVisible">{{item.name || item.title}}</h4>
-    <p class="list-group-item-text" ng-if="config.likesVisible">
-      {{item.total_rates}} likes
-    </p>
-    <p class="list-group-item-text" ng-if="config.dateVisible">
-      {{(item.creationDate || item.created_on).replace(' ', 'T') | date:'mediumDate'}}
-    </p>
+  <div class="triangle-up" ng-class="{megacrac: (item.tags.indexOf('megacrac') >= 0), numero1: (item.tags.indexOf('numero1') >= 0)}">
   </div>
+  <img ng-src="{{item.thumbnail_url}}">
+</div>
+<div class="metadata">
+  <p class="text-left"><strong>{{item.name}}</strong></p>
+  <p class="text-left">{{item.description}}</p>
 </div>

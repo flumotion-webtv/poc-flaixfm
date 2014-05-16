@@ -253,7 +253,8 @@ module.exports = function (grunt) {
             'index.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'styles/*.png'
           ]
         }, {
           expand: true,
@@ -282,6 +283,25 @@ module.exports = function (grunt) {
       ]
     },
 
+    htmlrefs: {
+      dist: {
+        src: '<%= yeoman.dist %>/index.html',
+        dest: '<%= yeoman.dist %>/index.html'
+      }
+    },
+
+    // use AngularJS $templateCache to compile templates into a JS file
+    ngtemplates:  {
+      dist: {
+        cwd: '<%= yeoman.app %>',
+        src: 'template/**/*.html',
+        dest: '<%= yeoman.app %>/template/templates.js',
+        options: {
+          module: 'fmt'
+        }
+      }
+    },
+
     buildcontrol: {
       options: {
         dir: 'dist',
@@ -295,7 +315,7 @@ module.exports = function (grunt) {
           branch: 'gh-pages'
         }
       },
-      remote: {
+      github: {
         options: {
           remote: 'https://github.com/flumotion-webtv/poc-flaixfm.git',
           branch: 'gh-pages'
@@ -328,6 +348,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'bowerInstall',
+    'ngtemplates',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
@@ -338,7 +359,8 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'rev',
-    'usemin'
+    'usemin',
+    'htmlrefs'
   ]);
 
   grunt.registerTask('default', [
