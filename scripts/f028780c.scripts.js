@@ -1,1 +1,0 @@
-"use strict";angular.module("pocFlaixfmApp",["fmt"]).run(["$window",function(a){a.fmtBaseUrl="http://bo.flaix.webtv.flumotion.com/",$(window).scroll(function(){return $(".animate-in").not(".hidden").each(function(a,b){return $(b).offset().top+80<$(window).height()+$(window).scrollTop()?$(b).removeClass("animate-in"):void 0})})}]);
