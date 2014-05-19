@@ -11,7 +11,8 @@
 .fmt-player .vjs-default-skin .vjs-time-controls,
 .fmt-player .vjs-default-skin .vjs-time-divider,
 .fmt-player .vjs-default-skin .vjs-mute-control,
-.fmt-player .vjs-default-skin .vjs-volume-menu-button {
+.fmt-player .vjs-default-skin .vjs-volume-menu-button,
+.fmt-player .vjs-default-skin .vjs-slider-handle{
     display: none;
 }
 
@@ -41,24 +42,6 @@
     background-color: #f6c0c0;
 }
 
-.fmt-player .vjs-default-skin .vjs-seek-handle:before {
-    padding-top: 0;
-    font-size: 1.1em;
-}
-
-.fmt-player .vjs-default-skin .vjs-slider-handle:before {
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
-}
-
-/* volume */
-.fmt-player .vjs-default-skin .vjs-volume-handle:before {
-    top: -.1em;
-}
-
 .fmt-player .vjs-default-skin .vjs-volume-control {
     float: left;
 }
@@ -66,10 +49,6 @@
 .fmt-player .vjs-default-skin .vjs-volume-bar {
     background-color: #f6c0c0;
     height: .7em;
-}
-
-.fmt-player .vjs-default-skin .vjs-volume-handle:before {
-    font-size: 1em;
 }
 
 /* hide shadows */
