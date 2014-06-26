@@ -5,7 +5,7 @@
 }
 
 a.list-group-item {
-    padding: 0px;
+    padding: 0;
     border-width: 0;
 }
 
@@ -26,7 +26,7 @@ a.list-group-item .metadata {
 }
 
 a.list-group-item .metadata p {
-    margin: 0px;
+    margin: 0;
     line-height: 15px;
 }
 
@@ -41,9 +41,9 @@ a.list-group-item .metadata p {
     height: 0;
     margin-left: auto;
     margin-right: auto;
-    border-left: 67px solid transparent;
-    border-right: 67px solid transparent;
-    border-top: 60px solid black;
+    border-left: 71px solid transparent;
+    border-right: 71px solid transparent;
+    border-top: 70px solid black;
 }
 
 .triangle-down > div > p {
@@ -52,19 +52,19 @@ a.list-group-item .metadata p {
     right: 0;
     color: white;
     font-family: monospace;
-    top: -5px;
+    top: 0;
     font-size: 40px;
 }
 
 /* triangle small */
 .triangle-down.triangle-sm > div {
-    border-left: 35px solid transparent;
-    border-right: 35px solid transparent;
-    border-top: 30px solid black;
+    border-left: 32px solid transparent;
+    border-right: 32px solid transparent;
+    border-top: 32px solid black;
 }
 
 .triangle-down.triangle-sm > div > p {
-    top: -2px;
+    top: 0;
     font-size: 17px;
 }
 
