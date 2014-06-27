@@ -44,8 +44,12 @@
 
           <!-- social sharing -->
           <div class="social-wrapper">
-            <img src="styles/img/googleplay.png" class="pull-left googleplay">
-            <img src="styles/img/itunes.png" class="pull-left itunes">
+            <a ng-show="gplayUrl" ng-href="{{gplayUrl}}" target="_blank">
+              <img src="styles/img/googleplay.png" class="pull-left googleplay">
+            </a>
+            <a ng-show="itunesUrl" ng-href="{{itunesUrl}}" target="_blank">
+              <img src="styles/img/itunes.png" class="pull-left itunes">
+            </a>
             <div fmt-addthis use-preferred="false" buttons="facebook,twitter"></div>
           </div>
         </div>
@@ -87,6 +91,16 @@
       angular.module('app', ['fmt']).controller('SongCtrl', function ($rootScope, $scope) {
         $rootScope.$on('fmtPodSelected', function (event, song) {
           $scope.song = song;
+
+          // refresh Google Play and iTunes links
+          $scope.gplayUrl = $scope.itunesUrl = null;
+          angular.forEach(song.extra_fields, function (field) {
+            if (field.name === 'gplay') {
+              $scope.gplayUrl = field.value;
+            } else if (field.name === 'itunes') {
+              $scope.itunesUrl = field.value;
+            }
+          })
         });
       });
     </script>
