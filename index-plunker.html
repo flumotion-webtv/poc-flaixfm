@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <script src='http://djds4rce.github.io/angular-socialshare.min.js'></script>
+  <script src="http://platform.twitter.com/widgets.js"></script>
+</head>
+
+<body ng-app='testing'>
+<h1>Hello Plunker!</h1>
+<div ng-controller='temp'>
+  <div facebook data-name='Fb Share' data-url='http://google.com' data-picture-url='http://plnkr.co/img/plunker.png'
+       data-caption='Testing Facebook Shae' data-shares='shares'>
+    <a href>Share To facebook<a>
+      <p>Number of Shares: {{shares}}</p>
+  </div>
+  <a twitter  data-lang="en" data-count='vertical' data-url='http://google.com' data-via='notsosleepy' data-size="medium" data-text='Testing Twitter Share' ></a>
+  <div linkdin data-url='http://google.com' data-title='Linkdin Share' data-summary="testing Linkdin Share" data-shares='linkdinshares'>
+    <a href>Share to Linkdin</a>
+    <p>Number of Shares:{{linkdinshares}}</p>
+  </div>
+  <div gplus class="g-plus" data-size="tall" data-annotation="vertical-bubble" data-href='http://google.com' data-action='share'></div>
+
+</div>
+
+<script>angular.module('testing',['djds4rce.angular-socialshare'])
+    .run(function($FB){
+      $FB.init('386469651480295');
+    });
+
+angular.module('testing').controller('temp',function($scope){
+
+});</script>
+</body>
+
+</html>
