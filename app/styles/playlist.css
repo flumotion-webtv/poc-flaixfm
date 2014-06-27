@@ -43,7 +43,7 @@ a.list-group-item .metadata p {
     margin-right: auto;
     border-left: 71px solid transparent;
     border-right: 71px solid transparent;
-    border-top: 70px solid black;
+    border-top: 70px solid #272729;
 }
 
 .triangle-down > div > p {
@@ -58,9 +58,9 @@ a.list-group-item .metadata p {
 
 /* triangle small */
 .triangle-down.triangle-sm > div {
-    border-left: 32px solid transparent;
-    border-right: 32px solid transparent;
-    border-top: 32px solid black;
+    border-left-width: 32px;
+    border-right-width: 32px;
+    border-top-width: 32px;
 }
 
 .triangle-down.triangle-sm > div > p {
