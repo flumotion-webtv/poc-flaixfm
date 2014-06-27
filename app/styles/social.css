@@ -6,14 +6,16 @@
     padding: 5px 0 0 30px;
 }
 
-.addthis_toolbox .at15t_facebook {
-    background: url('img/facebook.png') no-repeat center !important;
-}
-
 .addthis_toolbox .at15t_twitter {
     background: url('img/twitter.png') no-repeat center !important;
 }
 
 .addthis_toolbox .at300b {
     padding: 5px 0 0 15px;
+}
+
+div.facebook {
+    float: left;
+    padding-left: 20px;
+    padding-top: 8px;
 }

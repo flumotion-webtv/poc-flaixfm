@@ -50,14 +50,18 @@
             <a ng-show="itunesUrl" ng-href="{{itunesUrl}}" target="_blank">
               <img src="styles/img/itunes.png" class="pull-left itunes">
             </a>
-            <div fmt-addthis use-preferred="false" buttons="facebook,twitter"></div>
+            <div facebook class="facebook" data-name="{{song.name}}" data-url="http://flumotion-webtv.github.io/poc-flaixfm/#/{{song.id}}/slug" data-picture-url="{{song.thumbnail_url}}"
+                 data-caption="{{song.description}}" data-shares="shares">
+              <a href><img src="styles/img/facebook.png"><a>
+            </div>
+            <div fmt-addthis use-preferred="false" buttons="twitter"></div>
           </div>
         </div>
       </div>
       <div class="row">
 
         <!-- playlist -->
-        <div fmt-playlist content="api/channels/53/pods?extended=true"></div>
+        <div fmt-playlist content="http://bo.flaix.webtv.flumotion.com/api/channels/53/pods?extended=true"></div>
       </div>
     </div>
     <hr>
@@ -79,6 +83,7 @@
     <!-- endref -->
 
     <!-- build:js scripts/fmt.min.js -->
+    <script src="bower_components/angular-socialshare/angular-socialshare.js"></script>
     <script src="bower_components/angular-fmt/fmt.min.js"></script>
     <!-- <script src="template/templates.js"></script> -->
     <!-- endbuild -->
@@ -88,21 +93,27 @@
       window.fmtBaseUrl = 'http://bo.flaix.webtv.flumotion.com/';
 
       // listen song selection to update metadatas
-      angular.module('app', ['fmt']).controller('SongCtrl', function ($rootScope, $scope) {
-        $rootScope.$on('fmtPodSelected', function (event, song) {
-          $scope.song = song;
+      angular.module('app', ['fmt', 'djds4rce.angular-socialshare'])
 
-          // refresh Google Play and iTunes links
-          $scope.gplayUrl = $scope.itunesUrl = null;
-          angular.forEach(song.extra_fields, function (field) {
-            if (field.name === 'gplay') {
-              $scope.gplayUrl = field.value;
-            } else if (field.name === 'itunes') {
-              $scope.itunesUrl = field.value;
-            }
+          .run(function($FB){
+            $FB.init('831432536874669');
           })
-        });
-      });
+
+          .controller('SongCtrl', function ($rootScope, $scope) {
+            $rootScope.$on('fmtPodSelected', function (event, song) {
+              $scope.song = song;
+
+              // refresh Google Play and iTunes links
+              $scope.gplayUrl = $scope.itunesUrl = null;
+              angular.forEach(song.extra_fields, function (field) {
+                if (field.name === 'gplay') {
+                  $scope.gplayUrl = field.value;
+                } else if (field.name === 'itunes') {
+                  $scope.itunesUrl = field.value;
+                }
+              })
+            });
+          });
     </script>
 </body>
 </html>
