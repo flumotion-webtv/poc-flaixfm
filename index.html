@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/d5351fe0.style.css"/>
+    <link rel="stylesheet" href="styles/c7d59550.style.css"/>
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -45,8 +45,8 @@
             <a ng-show="itunesUrl" ng-href="{{itunesUrl}}" target="_blank">
               <img src="styles/img/itunes.png" class="pull-left itunes">
             </a>
-            <div facebook data-name='{{song.name}}' data-url='http://flumotion-webtv.github.io/poc-flaixfm/#/{{song.id}}/slug' data-picture-url='{{song.thumbnail_url}}'
-                 data-caption='{{song.description}}' data-shares='shares' style="float: left; padding-left: 20px; padding-top: 8px;">
+            <div facebook class="facebook" data-name="{{song.name}}" data-url="http://flumotion-webtv.github.io/poc-flaixfm/#/{{song.id}}/slug" data-picture-url="{{song.thumbnail_url}}"
+                 data-caption="{{song.description}}" data-shares="shares">
               <a href><img src="styles/img/facebook.png"><a>
             </div>
             <div fmt-addthis use-preferred="false" buttons="twitter"></div>
@@ -56,7 +56,7 @@
       <div class="row">
 
         <!-- playlist -->
-        <div fmt-playlist content="api/channels/53/pods?extended=true"></div>
+        <div fmt-playlist content="http://bo.flaix.webtv.flumotion.com/api/channels/53/pods?extended=true"></div>
       </div>
     </div>
     <hr>
@@ -69,9 +69,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"></script>
 
-    <script src='http://djds4rce.github.io/angular-socialshare.min.js'></script>
-
-    <script src="scripts/0848bfa4.fmt.min.js"></script>
+    <script src="scripts/d0a6cb35.fmt.min.js"></script>
 
     <script>
       // Flumotion OVRP base URL to load the content
