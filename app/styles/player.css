@@ -12,7 +12,7 @@
 .fmt-player .vjs-default-skin .vjs-time-divider,
 .fmt-player .vjs-default-skin .vjs-mute-control,
 .fmt-player .vjs-default-skin .vjs-volume-menu-button,
-.fmt-player .vjs-default-skin .vjs-slider-handle{
+.fmt-player .vjs-default-skin .vjs-slider-handle {
     display: none;
 }
 
@@ -49,6 +49,7 @@
 .fmt-player .vjs-default-skin .vjs-volume-bar {
     background-color: #f6c0c0;
     height: .7em;
+    margin-top: 0.9em;
 }
 
 /* hide shadows */
@@ -67,6 +68,29 @@
     position: absolute;
     top: 10px;
     left: 120px;
-    right: 30px;
-    font-size: .9em;
+    right: 12px;
+    font-size: 1em;
+}
+
+.fmt-player .vjs-default-skin:hover .vjs-progress-control {
+    font-size: 1em;
+}
+
+/* play button */
+.fmt-player .vjs-default-skin .vjs-control.vjs-play-control:before {
+    font-size: 2.3em;
+    line-height: 1.4;
+    left: 2px;
+}
+
+.fmt-player .vjs-default-skin .vjs-control.vjs-play-control {
+    width: 4em;
+}
+
+.fmt-player .vjs-default-skin .vjs-control.vjs-volume-control {
+    border-right: 2px solid;
+    border-left: 2px solid;
+    height: 2.4em;
+    margin: 3px 0 3px 0;
+    width: 7em;
 }
