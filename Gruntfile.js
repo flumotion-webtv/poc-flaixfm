@@ -126,7 +126,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     bowerInstall: {
       app: {
-        src: ['<%= yeoman.app %>/index.html'],
+        src: ['<%= yeoman.app %>/index*.html'],
         ignorePath: '<%= yeoman.app %>/'
       }
     },
@@ -139,7 +139,6 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
             '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/styles/fonts/*',
             '!<%= yeoman.dist %>/images/bg.png'
           ]
         }
@@ -150,7 +149,7 @@ module.exports = function (grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
+      html: '<%= yeoman.app %>/index*.html',
       options: {
         dest: '<%= yeoman.dist %>',
         flow: {
@@ -250,11 +249,12 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            'index.html',
+            'index*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*',
-            'styles/img/*.png'
+            'styles/img/*.png',
+            'styles/fonts/*'
           ]
         }, {
           expand: true,
@@ -287,6 +287,10 @@ module.exports = function (grunt) {
       dist: {
         src: '<%= yeoman.dist %>/index.html',
         dest: '<%= yeoman.dist %>/index.html'
+      },
+      live: {
+        src: '<%= yeoman.dist %>/index-live.html',
+        dest: '<%= yeoman.dist %>/index-live.html'
       }
     },
 
@@ -360,7 +364,8 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
-    'htmlrefs'
+    'htmlrefs:dist',
+    'htmlrefs:live'
   ]);
 
   grunt.registerTask('default', [
