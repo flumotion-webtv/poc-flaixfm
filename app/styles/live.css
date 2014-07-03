@@ -106,3 +106,15 @@ body {
     margin: 3px 0 3px 0;
     width: 100px;
 }
+
+/* triangle pointing to the left */
+.triangle-left > div {
+    width: 0;
+    height: 0;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+    border-right: 45px solid #dbdbdb;
+    position: absolute;
+    top: 125px;
+    right: 0px;
+}

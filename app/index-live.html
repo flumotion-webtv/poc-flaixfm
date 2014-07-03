@@ -19,15 +19,18 @@
     <![endif]-->
 
     <div ng-app="app" ng-controller="Ctrl" style="width: 341px;">
-      <div style="padding: 8px; background-color: #dbdbdb;">
-        <img ng-src="{{item.thumbnailUrl}}" width="100%">
+      <div style="padding: 8px; background-color: #dbdbdb; position: relative;">
+        <div class="triangle-left hidden-sm hidden-xs">
+          <div></div>
+        </div>
+        <img ng-src="{{item.image}}" width="100%">
       </div>
       <div style="padding: 8px;">
-        <p style="font-weight: bold; font-size: 14px; text-transform: uppercase; font-family: TwCenMTRegular;">{{item.name}}</p>
-        <p style="font-size: 14px; text-transform: uppercase; font-family: TwCenMTRegular;">{{item.description}}</p>
+        <p style="font-weight: bold; font-size: 14px; text-transform: uppercase; font-family: TwCenMTRegular;">{{item.title}}</p>
+        <p style="font-size: 14px; text-transform: uppercase; font-family: TwCenMTRegular;">{{item.author}}</p>
 
         <!-- player -->
-        <div fmt-player content="1418" style="width: 153px; height: 22px;"></div>
+        <div fmt-player content="{{podId}}" autoplay-enabled="true" style="width: 153px; height: 22px;"></div>
 
         <p style="font-size: 18px; text-transform: uppercase; font-family: Weston-Free; margin-bottom: 0;">Consulta la programació</p>
       </div>
@@ -61,13 +64,23 @@
       // listen song selection to update metadatas
       angular.module('app', ['fmt'])
 
-          .controller('Ctrl', function ($scope) {
-            // TODO
-            $scope.item = {
-              thumbnailUrl: 'http://api.flaix.webtv.flumotion.com/audios/355/thumbnail.jpg?w=bd336e76',
-              name: 'This is',
-              description: 'Icona pop'
+          .controller('Ctrl', function ($scope, $timeout, $http) {
+
+            $scope.podId = 1418;
+
+            // refresh metadata every 15sec
+            var interval = 15000;
+
+            var fetchCurrentMetadata = function() {
+              $http.get(window.fmtBaseUrl + 'backend/active/?podId=' + $scope.podId)
+                  .success(function (response) {
+                    $scope.item = angular.fromJson(response.value);
+                    $timeout(fetchCurrentMetadata, interval);
+                  });
             };
+
+            // start fetching metadata
+            fetchCurrentMetadata();
           });
     </script>
 </body>
