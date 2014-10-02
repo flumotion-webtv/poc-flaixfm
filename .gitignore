@@ -5,3 +5,4 @@ dist
 .idea
 app/bower_components
 app/template/*.js
+npm-debug.log

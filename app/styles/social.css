@@ -1,21 +1,27 @@
 .social-wrapper {
-    padding-top: 120px;
+    margin-top: 120px;
+    float: left;
+    display: inline-block;
 }
 
 .social-wrapper .itunes {
     padding: 5px 0 0 30px;
+
+
 }
 
 .addthis_toolbox .at15t_twitter {
     background: url('img/twitter.png') no-repeat center !important;
+    margin-top: -27px;
+    margin-left: 52px;
 }
 
 .addthis_toolbox .at300b {
-    padding: 5px 0 0 15px;
+    padding: 10px 0 0 15px;
 }
 
+
 div.facebook {
-    float: left;
-    padding-left: 20px;
-    padding-top: 8px;
+    padding-left: 0px;
+
 }
