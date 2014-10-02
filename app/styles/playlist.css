@@ -102,4 +102,5 @@ a.list-group-item .metadata p.truncate.text-left {
 
 .triangle-up.numero1 {
     background-image: url('img/numero1.png');
+    margin-bottom: 8px;
 }
