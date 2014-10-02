@@ -97,6 +97,7 @@ a.list-group-item .metadata p.truncate.text-left {
 
 .triangle-up.megacrac {
     background-image: url('img/megacrac.png');
+    margin-bottom: 8px;
 }
 
 .triangle-up.numero1 {
