@@ -3,10 +3,17 @@
     margin-bottom: 0;
     text-transform: uppercase;
 }
+.list-group .col-md-4 .metadata p.truncate.text-left {
+    width: 380px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 a.list-group-item {
     padding: 0;
     border-width: 0;
+
 }
 
 a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
@@ -16,18 +23,28 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 
 a.list-group-item .thumb-wrap, a.list-group-item .thumb-wrap img {
     width: 100%;
+    min-height:195px;
 }
+
 
 a.list-group-item .metadata {
     margin: 0;
     padding: 4px 0 0 5px;
-    height: 32px;
+    height: 44px;
     border-left: 1px solid #ddd;
+
 }
 
 a.list-group-item .metadata p {
     margin: 0;
     line-height: 15px;
+}
+
+a.list-group-item .metadata p.truncate.text-left {
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* triangle pointing down */
