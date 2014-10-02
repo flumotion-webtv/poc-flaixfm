@@ -25,3 +25,7 @@ div.facebook {
     padding-left: 0px;
 
 }
+
+.facebookButton .pluginButtonImage button[type="button"]{
+    display: none;
+}
