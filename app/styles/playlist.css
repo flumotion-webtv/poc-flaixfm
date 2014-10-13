@@ -23,7 +23,7 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 
 a.list-group-item .thumb-wrap, a.list-group-item .thumb-wrap img {
     width: 100%;
-    min-height:195px;
+    /*min-height:195px;*/
 }
 
 
@@ -41,7 +41,6 @@ a.list-group-item .metadata p {
 }
 
 a.list-group-item .metadata p.truncate.text-left {
-    width: 180px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
