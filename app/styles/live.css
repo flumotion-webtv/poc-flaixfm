@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+}
+
+
+.fmt-player {
+    width: 100%;
+    height: 22px;
+}
+
+/* hide unnecessary components */
+.fmt-player .vjs-default-skin .vjs-big-play-button,
+.fmt-player .vjs-default-skin .vjs-fullscreen-control,
+.fmt-player .vjs-default-skin .vjs-poster,
+.fmt-player .vjs-default-skin .vjs-loading-spinner:before,
+.fmt-player .vjs-default-skin .vjs-time-controls,
+.fmt-player .vjs-default-skin .vjs-time-divider,
+.fmt-player .vjs-default-skin .vjs-mute-control,
+.fmt-player .vjs-default-skin .vjs-volume-menu-button,
+.fmt-player .vjs-default-skin .vjs-slider-handle,
+.fmt-player .vjs-default-skin .vjs-progress-control {
+    display: none;
+}
+
+/* icons color and border */
+.fmt-player .vjs-default-skin {
+    color: #dadada;
+    border-radius: 5px;
+}
+
+.fmt-player .vjs-default-skin .vjs-control {
+    height: 22px;
+}
+
+.fmt-player .vjs-default-skin .vjs-control-bar {
+    display: block;
+    background-color: #3b3b3b;
+    border-radius: 5px;
+    height: 22px;
+}
+
+/* bars color */
+.fmt-player .vjs-default-skin .vjs-play-progress,
+.fmt-player .vjs-default-skin .vjs-volume-level,
+.fmt-player .vjs-default-skin .vjs-volume-bar {
+    background-color: #dadada;
+    height: .7em;
+}
+
+/* progress */
+.fmt-player .vjs-default-skin .vjs-slider,
+.fmt-player .vjs-default-skin .vjs-load-progress {
+    background-color: #999;
+}
+
+.fmt-player .vjs-default-skin .vjs-volume-control {
+    float: left;
+}
+
+.fmt-player .vjs-default-skin .vjs-volume-bar {
+    background-color: #999;
+    height: .7em;
+    margin-top: 0.5em;
+    margin-left: 10px;
+    width: 90px;
+}
+
+/* hide shadows */
+.fmt-player .vjs-default-skin .vjs-control:before {
+    text-shadow: none;
+}
+
+/* don't hide the control bar */
+.fmt-player .vjs-default-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+    visibility: inherit;
+    opacity: 1;
+}
+
+/* move the progress bar inside controls */
+.fmt-player .vjs-default-skin .vjs-progress-control {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    right: 12px;
+    font-size: 1em;
+}
+
+.fmt-player .vjs-default-skin:hover .vjs-progress-control {
+    font-size: 1em;
+}
+
+/* play button */
+.fmt-player .vjs-default-skin .vjs-control.vjs-play-control:before {
+    font-size: 1.6em;
+    line-height: 1.4;
+    left: -2px;
+}
+
+.fmt-player .vjs-default-skin .vjs-control.vjs-play-control {
+    width: 4em;
+}
+
+.fmt-player .vjs-default-skin .vjs-control.vjs-volume-control {
+    border-left: 2px solid;
+    height: 16px;
+    margin: 3px 0 3px 0;
+    width: 100px;
+}
+
+/* triangle pointing to the left */
+.triangle-left > div {
+    width: 0;
+    height: 0;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+    border-right: 45px solid #dbdbdb;
+    position: absolute;
+    top: 125px;
+    right: 0px;
+}

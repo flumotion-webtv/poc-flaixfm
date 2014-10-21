@@ -1,0 +1,9 @@
+<div class="list-group">
+    <a ng-repeat="item in items"
+       fmt-playlist-item
+       item="item"
+       ng-click="selectItem(item)"
+       class="list-group-item"
+       ng-class="{active: (item.id === currentItem.id), 'col-md-4': $index < 3, 'col-md-2': $index >= 3}">
+    </a>
+</div>

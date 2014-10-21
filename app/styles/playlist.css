@@ -1,0 +1,105 @@
+.list-group {
+    padding: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.list-group .col-md-4 .metadata p.truncate.text-left {
+    width: 380px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a.list-group-item {
+    padding: 0;
+    border-width: 0;
+
+}
+
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+    background-color: #f14b4b;
+    border-color: #f14b4b;
+}
+
+a.list-group-item .thumb-wrap, a.list-group-item .thumb-wrap img {
+    width: 100%;
+    /*min-height:195px;*/
+}
+
+
+a.list-group-item .metadata {
+    margin: 0;
+    padding: 4px 0 0 5px;
+    height: 44px;
+    border-left: 1px solid #ddd;
+
+}
+
+a.list-group-item .metadata p {
+    margin: 0;
+    line-height: 15px;
+}
+
+a.list-group-item .metadata p.truncate.text-left {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* triangle pointing down */
+.triangle-down {
+    position: absolute;
+    width: 100%;
+}
+
+.triangle-down > div {
+    width: 0;
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 71px solid transparent;
+    border-right: 71px solid transparent;
+    border-top: 70px solid #272729;
+}
+
+.triangle-down > div > p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: white;
+    font-family: Weston-Free;
+    top: 4px;
+    font-size: 40px;
+}
+
+/* triangle small */
+.triangle-down.triangle-sm > div {
+    border-left-width: 32px;
+    border-right-width: 32px;
+    border-top-width: 32px;
+}
+
+.triangle-down.triangle-sm > div > p {
+    top: 2px;
+    font-size: 17px;
+}
+
+/* triangle pointing up */
+.triangle-up {
+    background: no-repeat center bottom;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 36px;
+    position: absolute;
+}
+
+.triangle-up.megacrac {
+    background-image: url('img/megacrac.png');
+    margin-bottom: 8px;
+}
+
+.triangle-up.numero1 {
+    background-image: url('img/numero1.png');
+    margin-bottom: 8px;
+}

@@ -1,0 +1,33 @@
+.social-wrapper {
+    position: relative;
+    margin-top: 20%;
+    padding: 3px;
+    float: left;
+    display: inline-block;
+}
+
+.social-wrapper .itunes {
+    padding: 5px 0 0 30px;
+
+
+}
+
+.addthis_toolbox .at15t_twitter {
+    background: url('img/twitter.png') no-repeat center !important;
+    margin-top: -27px;
+    margin-left: 52px;
+}
+
+.addthis_toolbox .at300b {
+    padding: 10px 0 0 15px;
+}
+
+
+div.facebook {
+    padding-left: 0px;
+
+}
+
+.facebookButton .pluginButtonImage button[type="button"]{
+    display: none;
+}

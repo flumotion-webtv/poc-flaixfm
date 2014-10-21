@@ -1,0 +1,19 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+    font-family: "Weston-Free";
+    src: url("fonts/Weston_Free.eot?") format("eot"),
+    url("fonts/Weston_Free.woff") format("woff"),
+    url("fonts/Weston_Free.ttf") format("truetype"),
+    url("fonts/Weston_Free.svg#Weston-Free") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TwCenMTRegular';
+    src: url('fonts/tw-cen-mt-1361501946.eot');
+    src: url('fonts/tw-cen-mt-1361501946.eot') format('embedded-opentype'),
+    url('fonts/tw-cen-mt-1361501946.woff') format('woff'),
+    url('fonts/tw-cen-mt-1361501946.ttf') format('truetype'),
+    url('fonts/tw-cen-mt-1361501946.svg#TwCenMTRegular') format('svg');
+}
