@@ -59,14 +59,14 @@
 
     <script>
       // Flumotion OVRP base URL to load the content
-      window.fmtBaseUrl = 'http://bo.casting.webtvpp01.flumotion.com/';
+      window.fmtBaseUrl = 'http://bo.flaix.webtv.flumotion.com/';
 
       // listen song selection to update metadatas
       angular.module('app', ['fmt'])
 
           .controller('Ctrl', function ($scope, $timeout, $http) {
 
-            $scope.podId = 1418;
+            $scope.podId = 15;
 
             // refresh metadata every 15sec
             var interval = 15000;
