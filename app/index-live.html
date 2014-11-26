@@ -18,22 +18,29 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-app="app" ng-controller="Ctrl" style="width: 341px;">
-      <div style="padding: 8px; background-color: #dbdbdb; position: relative;">
-        <div class="triangle-left hidden-sm hidden-xs">
-          <div></div>
+    <div ng-app="fmt" style="width: 341px;">
+
+      <!-- metadata -->
+      <div fmt-metadata></div>
+
+      <!-- player -->
+      <div fmt-player content="15" autoplay-enabled="true" style="width: 153px; height: 22px;"></div>
+      <p style="font-size: 18px; text-transform: uppercase; font-family: Weston-Free; margin-bottom: 0;">Consulta la programació</p>
+
+      <!-- metadata custom template -->
+      <script id="template/metadata/metadata.html" type="text/ng-template">
+        <div style="padding: 8px; background-color: #dbdbdb; position: relative;">
+          <div class="triangle-left hidden-sm hidden-xs">
+            <div></div>
+          </div>
+          <img ng-src="{{metadata.image}}" width="100%">
         </div>
-        <img ng-src="{{item.image}}" width="100%">
-      </div>
-      <div style="padding: 8px;">
-        <p style="font-weight: bold; font-size: 14px; text-transform: uppercase; font-family: TwCenMTRegular;">{{item.title}}</p>
-        <p style="font-size: 14px; text-transform: uppercase; font-family: TwCenMTRegular;">{{item.author}}</p>
-
-        <!-- player -->
-        <div fmt-player content="{{podId}}" autoplay-enabled="true" style="width: 153px; height: 22px;"></div>
-
-        <p style="font-size: 18px; text-transform: uppercase; font-family: Weston-Free; margin-bottom: 0;">Consulta la programació</p>
-      </div>
+        <div style="padding: 8px;">
+          <p style="font-weight: bold; font-size: 14px; text-transform: uppercase; font-family: TwCenMTRegular;">{{metadata.title}}</p>
+          <p style="font-size: 14px; text-transform: uppercase; font-family: TwCenMTRegular;">{{metadata.author}}</p>
+        </div>
+      </script>
+      <!-- end metadata template -->
     </div>
 
     <!--[if lt IE 9]>
@@ -54,34 +61,11 @@
 
     <!-- build:js scripts/fmt.min.js -->
     <script src="bower_components/angular-fmt/fmt.min.js"></script>
-    <!-- <script src="template/templates.js"></script> -->
     <!-- endbuild -->
 
     <script>
       // Flumotion OVRP base URL to load the content
       window.fmtBaseUrl = 'http://bo.flaix.webtv.flumotion.com/';
-
-      // listen song selection to update metadatas
-      angular.module('app', ['fmt'])
-
-          .controller('Ctrl', function ($scope, $timeout, $http) {
-
-            $scope.podId = 15;
-
-            // refresh metadata every 15sec
-            var interval = 15000;
-
-            var fetchCurrentMetadata = function() {
-              $http.get(window.fmtBaseUrl + 'backend/active/?podId=' + $scope.podId)
-                  .success(function (response) {
-                    $scope.item = angular.fromJson(response.value);
-                    $timeout(fetchCurrentMetadata, interval);
-                  });
-            };
-
-            // start fetching metadata
-            fetchCurrentMetadata();
-          });
     </script>
 </body>
 </html>
